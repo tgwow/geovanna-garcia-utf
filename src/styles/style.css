@@ -17,20 +17,32 @@ body {
 
 .container{
     width: 100%;
-    padding: 0 15px;
+    padding: 0 30px;
     margin: 0 auto;
-    max-width: 1336px;
+}
+.row{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.col{
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
 }
 a {
     text-decoration: none;
 }
-* {
-    outline: none!important
+*, :after, :before {
+    outline: none!important;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 section {
     padding-top: 7rem;
     padding-bottom: 5rem;
+    width:100%;
 }
 
 header {
@@ -39,13 +51,16 @@ header {
     width: 100%;
     position:fixed;
     top: 0;
+    z-index: 999;
+    box-shadow: -2px -3px 20px 3px rgba(34,34,59,.5);
 }
 .nav-content {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     flex-wrap: nowrap;
-    max-width: 1336px;
+    align-items: center;
+    
+
 }
 
 .link-home {
@@ -93,7 +108,7 @@ header {
 
 #home {
     margin-top: 70px;
-    height: calc(100vh - 190px);
+    height: calc(100vh - 70px);
     padding-top: 80px;
     padding-bottom: 40px;
     background: linear-gradient(rgba(34,34,59,.84),rgba(34,34,59,.98)), url("../../assets/images/geovanna-bg-home.jpg");
@@ -110,66 +125,6 @@ header {
 .home-content h2{
     font-size: 91px;
     margin-bottom: 20px;
-}
-
-@media only screen and (max-width: 1200px){
-    #home h2{
-        font-size: 77px;
-    }
-    #home h3 {
-        font-size: 49px;
-    }
-}
-@media only screen and (max-width: 992px){
-    #home h2{
-        font-size: 70px;
-    }
-    #home h3 {
-        font-size:42px;
-    }
-    .flex-collumn{
-        display: none;
-        flex-direction: column;
-    }
-}
-@media only screen and (max-width: 768px){
-    #home h2{
-        font-size: 56px;
-    }
-    #home h3 {
-        font-size: 28px;
-    }
-    #home h4 {
-        font-size: 17px;
-    }
-    .button{
-        height: 50px!important;
-        width: 220px!important;
-        font-size: 12px!important;
-    }
-    #apresentation h2 {
-        font-size: 20px;
-    }
-}
-@media only screen and (max-width: 480px){
-    #home h2{
-        font-size: 3rem;
-    }
-    #home h3 {
-        font-size: 1.5rem;
-    }
-}
-@media only screen and (max-width: 320px){
-    #home h2{
-        font-size: 2rem;
-    }
-    #home h3 {
-        font-size: 1rem;
-    }
-    #apresentation h2 {
-        font-size: 18px!important;
-        line-height: 22px!important;
-    }
 }
 .home-content h3 {
     font-size: 3.5rem;
@@ -220,7 +175,9 @@ header {
 }
 
 
-/*##### PRESENTATIION #####*/
+/*###########
+aPRESENTATIION
+############*/
 
 #apresentation {
     background: linear-gradient(rgba(74,74,105,.8),rgba(74,74,105,.8)), url("../../assets/images/geovanna-bg-presentation.jpg") 50%;
@@ -274,15 +231,16 @@ header {
 #about h3{
     font-family: 'trajan', sans-serif;
     color: #9a8c98;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
 }
 #about p{
     color: #22223b;
     line-height: 2rem;
     margin-bottom: 2rem;
-    font-size: 14px;
-    max-width: 660px;
+    font-size: 13px;
+    max-width: 560px;
+    font-weight: 400;
 }
 #about img{
     height: 120px;
@@ -291,4 +249,173 @@ header {
     margin-bottom: 4rem;
 }
 
+/*#######
+SERVICES
+#######*/
+#services{
+    background: linear-gradient(rgba(34,34,59,.84),rgba(34,34,59,.98)),url('../../assets/images/geovanna-bg-services.jpg');
+    background-position: 50%;
+    background-size: cover;
+}
+#services h2 {
+    font-family: 'trajan', sans-serif;
+    text-align:center;
+    font-size: 42px;
+    color: #f2e9e4;
+    margin-bottom: 42px;
+}
+#services img {
+    height: 120px;
+    margin-bottom: 42px;
+}
+#services h3 {
+    font-family: 'trajan', sans-serif;
+    font-size: 1.9rem;
+    color:#9a8c98;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 2.4rem;
+}
+.complet {
+    font-size: 2.8rem;
+    text-align:center;
+}
+#services p {
+    font-family: 'Montserrat',sans-serif;
+    color: #f2e9e485;
+    text-align: center;
+    padding: 0 13%;
+    font-size: 1.01rem;
+    line-height: 2rem;
+}
 
+/*####
+BRIEF
+####*/
+
+#brief h2 {
+    font-family: 'after', sans-serif;
+    color: #22223b;
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#brief img {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 3rem;
+}
+/*#media queries #### */
+@media only screen and (max-width: 1200px){
+    #home h2{
+        font-size: 77px;
+    }
+    #home h3 {
+        font-size: 49px;
+    }
+}
+@media only screen and (max-width: 992px){
+    #home h2{
+        font-size: 70px;
+    }
+    #home h3 {
+        font-size:42px;
+    }
+    .flex-collumn{
+        display: none;
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 768px){
+    #home h2{
+        font-size: 56px;
+    }
+    #home h3 {
+        font-size: 28px;
+    }
+    #home h4 {
+        font-size: 17px;
+    }
+    .button{
+        height: 50px!important;
+        width: 220px!important;
+        font-size: 12px!important;
+    }
+    #apresentation h2 {
+        font-size: 20px;
+    }
+    #about h2 {
+        font-size: 56px;
+        margin-bottom: 18px;
+        line-height: 67px;
+    }
+    #about h3 {
+        font-size: 14px;
+        margin-bottom: 13px;
+    }
+    .about-content {
+        text-align: center;
+    }
+    #about img {
+        height: 100px;
+        left: 50%;
+        position: relative;
+        transform: translate(-50%); 
+    }
+    section {
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+    #services .row{
+        flex-direction: column;
+        
+    }
+    #services p {
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    
+}
+@media only screen and (max-width: 480px){
+    #home h2{
+        font-size: 3rem;
+    }
+    #home h3 {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    #home h2{
+        font-size: 2rem;
+    }
+    #home h3 {
+        font-size: 1rem;
+    }
+    #apresentation h2 {
+        font-size: 18px!important;
+        line-height: 22px!important;
+    }
+}
+
+/*#### responsive layout ####*/
+
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+} 
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
