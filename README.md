@@ -1,5 +1,6 @@
 # Geovanna Garcia
 > Front-end project made in Web Development course
+
 ![](https://media.giphy.com/media/iDt1D3XHSlz4gjr9yy/giphy.gif)
 
 ## About
